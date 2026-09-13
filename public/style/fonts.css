@@ -1,0 +1,66 @@
+
+@font-face {
+    font-family: 'fujiwara';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./../fonts/fujiwarab-regular.ttf');
+}
+
+@font-face {
+    font-family: 'fujiwara';
+    font-weight: normal;
+    font-style: italic;
+    src: url('./../fonts/fujiwarab-regularitalic.ttf');
+}
+
+@font-face {
+    font-family: 'fujiwara';
+    font-weight: bold;
+    font-style: normal;
+    src: url('./../fonts/fujiwarab-bold.ttf');
+}
+@font-face {
+    font-family: 'fujiwara';
+    font-weight: bold;
+    font-style: italic;
+    src: url('./../fonts/fujiwarab-bolditalic.ttf');
+}
+
+@font-face {
+    font-family: 'fujiwara';
+    font-weight: 800;
+    font-style: normal;
+    src: url('./../fonts/fujiwarab-black.ttf');
+}
+@font-face {
+    font-family: 'fujiwara';
+    font-weight: 800;
+    font-style: italic;
+    src: url('./../fonts/fujiwarab-blackitalic.ttf');
+}
+
+@font-face {
+    font-family: 'fujiwara';
+    font-weight: light;
+    font-style: normal;
+    src: url('./../fonts/fujiwarab-light.ttf');
+}
+@font-face {
+    font-family: 'fujiwara';
+    font-weight: light;
+    font-style: italic;
+    src: url('./../fonts/fujiwarab-lightitalic.ttf');
+}
+
+@font-face {
+    font-family: 'fujiwara';
+    font-weight: 500;
+    font-style: normal;
+    src: url('./../fonts/fujiwarab-medium.ttf');
+}
+@font-face {
+    font-family: 'fujiwara';
+    font-weight: 500;
+    font-style: italic;
+    src: url('./../fonts/fujiwarab-mediumitalic.ttf');
+}
