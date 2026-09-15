@@ -1,7 +1,7 @@
 <?php include('./includes/header.php') ?>
-    <main>
+    <main id="content" role="main">
         <section class="hero hero--full-size">
-            <h1>Designer &amp;amp; Developer</h1>
+            <h1>Designer &amp; Developer</h1>
             <p class="hero-intro">Hello! I'm Jonno Witts, a Software Designer and Developer based in Oxfordshire, England.</p>
             <p>This is my personal website where I share things I've worked on and my personal feed of personal interests, with an occasional writing thrown in for good measure.</p>
             <img src="/images/hello.svg" alt="Illustration of an Apple Macintosh with the text 'hello' on the display in a handwritten font.">

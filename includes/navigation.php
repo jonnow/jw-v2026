@@ -15,8 +15,23 @@
             <li><a href="about.php">About</a></li>
             <li><a href="contact.php">Contact</a></li>
         </ul>
-        <span class="version">2026.0.1</span>
-        <!--    This could link to a picture / video of me working in the RadCam    -->
-        <span class="madeIn">Made in Oxfordshire</span>
+        <div class="nav-meta">
+            <span class="version">2026.0.1</span>
+            <!--    This could link to a picture / video of me working in the RadCam    -->
+            <span class="madeIn">Made in Oxfordshire</span>
+        </div>
     </div>
 </nav>
+<script type="text/javascript">
+    // Unset the nav popover if open and transitioning from mobile to desktop sizes
+    const nav = document.getElementById('site_nav'),
+        desktopQuery = window.matchMedia("(min-width: 601px)");
+
+    function unsetPopover(e) {
+        if(e.matches && nav.matches(':popover-open')) {
+            nav.hidePopover();
+        }
+    }
+
+    desktopQuery.addEventListener('change', unsetPopover);
+</script>

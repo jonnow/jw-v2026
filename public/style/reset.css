@@ -43,4 +43,9 @@ input, button, textarea, select {
 	  transition-duration: 0.01ms !important;
 	  scroll-behavior: auto !important;
 	}
-  }
+}
+
+[popover] {
+    border: none;
+    background-color: var(--palette-white);
+}

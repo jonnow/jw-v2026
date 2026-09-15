@@ -1,8 +1,9 @@
-@layer reset, base, components
+@layer reset, base, components;
 @import url('./reset.css') layer(reset);
 @import url('./fonts.css') layer(base);
 @import url('./variables.css') layer(base);
 @import url('./typography.css') layer(base);
+@import url('./nav.css') layer(base);
 
 
 body {

@@ -1,6 +1,164 @@
+/* Mobile menu */
+.a11y-menu {
+    position:absolute;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index:100;
+    top: -5rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: hotpink;
+    color: white;
+    &:focus {
+        top: 0;
+    }
+}
 header {
     position: absolute;
     overflow: visible;
     height: 100vh;
 
+    nav[popover] {
+        transform: translate3d(100%, 0, 0);
+        transition: transform 300ms ease-in-out,
+        display 300ms allow-discrete,
+        overlay 300ms allow-discrete;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 80vw;
+        padding: 1rem;
+        margin: 0 0 0 auto;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: flex;
+
+        @media screen and (max-width: 600px) {
+            &:popover-open {
+                transform: translate3d(0, 0, 0);
+                @starting-style {
+                    transform: translate3d(100%, 0, 0);
+                }
+
+                &::backdrop {
+                    background-image: radial-gradient(
+                            circle,
+                            white 0 5vw,
+                            transparent 5vw 20vw,
+                            white 20vw 22.5vw,
+                            #eeeeee 22.5vw
+                    ),
+                    conic-gradient(
+                            #272b66 0 50grad,
+                            #2d559f 50grad 100grad,
+                            #9ac147 100grad 150grad,
+                            #639b47 150grad 200grad,
+                            #e1e23b 200grad 250grad,
+                            #f7941e 250grad 300grad,
+                            #662a6c 300grad 350grad,
+                            #9a1d34 350grad 400grad,
+                            #43a1cd 100grad 150grad,
+                            #ba3e2e
+                    );
+                    animation: rot 1s forwards;
+                }
+            }
+        }
+
+            .menu-inner {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .nav-meta {
+                    display: flex;
+                    margin-top: auto;
+
+                    span {
+                        line-height: 1;
+
+                        &:last-child {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+    }
+}
+@keyframes rot {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+
+/* Desktop styles - not scoped within a media query as displaying in regular way, no need to unset the above. */
+@media screen and (min-width: 600px) {
+    header {
+        position: static;
+        height: auto;
+        background-color: #272b66;
+
+            display: flex;
+        .menu-inner {
+        }
+
+
+        .menu-control-open, .menu-control-close {
+            display: none;
+        }
+
+        nav[popover] {
+            /* Unset mobile rules */
+            popover: none;
+            position: static;
+            display: block;
+            height: auto;
+            transform: none;
+
+            div.menu-inner {
+                display: flex;
+            }
+
+            ul {
+                display: flex;
+                justify-content: end;
+                /* Make sure everything is pushed to the right edge */
+                margin-left: auto;
+                li {
+                    list-style: none;
+                }
+
+                a {
+                    display: block;
+                    padding: 0.75rem;
+                }
+            }
+        }
+
+        .nav-meta {
+            position: absolute;
+            box-sizing: border-box;
+            left: 0;
+            bottom: 2rem;
+            display: flex;
+            width: 100%;
+            padding: 0 1rem;
+            justify-content: space-between;
+            span:first-child {
+                left: 2rem;
+            }
+            span:last-child {
+                right: 2rem;
+            }
+        }
+    }
 }
