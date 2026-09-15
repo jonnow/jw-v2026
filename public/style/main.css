@@ -3,10 +3,13 @@
 @import url('./fonts.css') layer(base);
 @import url('./variables.css') layer(base);
 @import url('./typography.css') layer(base);
-@import url('./nav.css') layer(base);
+@import url('./components/nav.css') layer(base);
+@import url('./components/footer.css') layer(base);
+@import url('./components/buttons.css') layer(components);
 @import url('./home/hero.css') layer(components);
 @import url('./home/theLoop.css') layer(components);
-
+@import url('./components/theShelf.css') layer(components);
+@import url('./components/thanks.css') layer(components);
 
 body {
     background-color: var(--palette-white);

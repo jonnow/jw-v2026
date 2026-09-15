@@ -43,7 +43,8 @@
                     <img alt="alt tag for the image" />
                 </article>
             </div>
-            <a href="blog">Visit the feed</a>
+            <a class="btn btn-primary" href="blog">Visit the feed</a>
         </section>
+        <?php include('./includes/the-shelf.php') ?>
     </main>
 <?php include './includes/footer.php'; ?>

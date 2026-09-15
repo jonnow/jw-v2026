@@ -1,0 +1,26 @@
+.btn {
+    padding: .75rem 4rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    font-size: 1.2rem;
+    font-weight: 600;
+    &:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+        filter: brightness(1.25);
+    }
+}
+
+.btn-primary {
+    background: var(--palette-green);
+    color: var(--palette-white);
+    border-radius: 4rem;
+}
+
+.pill {
+    border-radius: 4rem;
+    padding: .5rem 1.5rem;
+    background: var(--palette-white);
+    font-size: .8rem;
+    text-decoration: none;
+}
