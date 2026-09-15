@@ -1,0 +1,19 @@
+main section.hero {
+    width: 95%;
+    max-width: 1440px;
+    margin: 2rem auto;
+    background-color: white;
+    h1 {
+        text-align: center;
+        font-size: clamp(2rem, 4vw, 5rem);
+        line-height: 200%;
+    }
+    p {
+        margin: 0 auto 1.75rem;
+    }
+    img {
+        display: block;
+        width: 80%;
+        margin: 2.5rem auto 0;
+    }
+}

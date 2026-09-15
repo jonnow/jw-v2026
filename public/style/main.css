@@ -4,6 +4,8 @@
 @import url('./variables.css') layer(base);
 @import url('./typography.css') layer(base);
 @import url('./nav.css') layer(base);
+@import url('./home/hero.css') layer(components);
+@import url('./home/theLoop.css') layer(components);
 
 
 body {

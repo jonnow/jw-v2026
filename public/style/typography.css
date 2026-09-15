@@ -25,5 +25,5 @@ p, ul, ol, span, dl, dt, dd {
     font-size: 1.35rem;
     font-weight: 500;
     letter-spacing: 0.02rem;
-    width: clamp(200px, 80vw, 40rem);
+    /*width: clamp(200px, 80vw, 40rem);*/
 }

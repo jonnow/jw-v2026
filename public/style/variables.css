@@ -6,4 +6,8 @@
     --palette-lavender: lavender;
     --palette-beige: beige;
     --palette-black: #222222;
+
+    --container-width: 80%;
+
+    --section-child-spacing: 2rem;
 }
