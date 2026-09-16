@@ -1,0 +1,91 @@
+.work-item {
+    width:1390px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    header, section {
+        grid-template-rows: subgrid;
+    }
+    header {
+        h1,.subheading {
+            grid-column: 1 / -1;
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-style: normal;
+            letter-spacing: -.01px;
+        }
+        .subheading {
+            font-size: .8rem;
+            margin-bottom: 2rem;
+        }
+        p:not(.subheading) {
+            grid-column: 4 / -2;
+            font-size: 1.1rem;
+            line-height: 165%;
+        }
+        ul.tags {
+            grid-column: 4 / -1;
+            margin-top: 1rem;
+            display: flex;
+
+        }
+        img {
+            grid-column: 3 / -2;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .post-body {
+        section {
+            background-color: white;
+            margin-bottom: 4rem;
+            h2 {
+                grid-column: 1 / -1;
+                font-size: 2rem;
+                margin-bottom: 1.8rem;
+            }
+            h3 {
+                grid-column: 2 / -1;
+                margin-left: 4rem;
+                font-size: 1.75rem;
+                margin-bottom: 1rem;
+            }
+            .image-container,
+            .polaroids {
+                grid-column-start: 3;
+                display: flex;
+            }
+            p, ul {
+                grid-column: 3 / -2;
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            .call-out-box {
+                grid-column: 3 / -2;
+            }
+        }
+    }
+
+    aside {
+       h3 {
+           text-align: center;
+       }
+        .row {
+            grid-column: 3 / -3;
+            a {
+                border-radius: 25px;
+                background-color: #2d559f;
+                padding: 1rem;
+                h3 {
+                    font-size: 1.2rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

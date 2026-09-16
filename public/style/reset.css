@@ -30,6 +30,11 @@ img {
     max-width: 100%;
 }
 
+ul, ol {
+    padding-left: 0;
+    list-style: none;
+}
+
 input, button, textarea, select {
     font: inherit;
 }

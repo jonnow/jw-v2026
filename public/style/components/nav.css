@@ -1,20 +1,33 @@
+/*
+    CONTENTS
+    ==============
+    1. accessible menu
+    2. Site nav
+    3. Main section nav
+*/
+
 /* Mobile menu */
-.a11y-menu {
+#skip .a11y-menu {
+    display: block;
     position:absolute;
-    left: 0;
-    right: 0;
+    left: -999px;
+    top:-999px;
     padding: 1rem;
     z-index:100;
-    top: -5rem;
     text-align: center;
     font-weight: bold;
     background-color: hotpink;
     color: white;
     &:focus {
+        left: 0;
         top: 0;
+        border: 1px solid #990000;
+        background-color: #ffc;
     }
 }
-header {
+
+/* Site nav */
+body > header {
     position: absolute;
     overflow: visible;
     height: 100vh;
@@ -102,7 +115,7 @@ header {
 
 /* Desktop styles - not scoped within a media query as displaying in regular way, no need to unset the above. */
 @media screen and (min-width: 600px) {
-    header {
+    body > header {
         position: static;
         height: auto;
         background-color: #272b66;
@@ -133,10 +146,6 @@ header {
                 justify-content: end;
                 /* Make sure everything is pushed to the right edge */
                 margin-left: auto;
-                li {
-                    list-style: none;
-                }
-
                 a {
                     display: block;
                     padding: 0.75rem;
@@ -159,6 +168,26 @@ header {
             span:last-child {
                 right: 2rem;
             }
+        }
+    }
+}
+
+/* In-page contents nav */
+article nav {
+    position: sticky;
+    top: 10rem;
+    left: 0;
+    width: 200px;
+    margin-top: -18rem;
+    margin-bottom: 20rem;
+    h3, ol li {
+        line-height: 125%;
+        margin-bottom: .55rem;
+        font-size: 1rem;
+    }
+    &.active {
+        a {
+            font-weight: bold;
         }
     }
 }

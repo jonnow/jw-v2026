@@ -9,7 +9,9 @@
     <meta name="description" content="Freelance Web Designer and Software Developer from the Yorkshire. Specialising in research, academic, &heritage projects">
 </head>
 <body>
-<a class="a11y-menu" tabindex="1" href="#content" class="skip-link">Skip to the content</a>
+<div id="skip">
+    <a class="a11y-menu skip-link" href="./#content">Skip to the content</a>
+</div>
 <header>
     <a class="logo" href="/">Jonno Witts</a>
     <?php include './includes/navigation.php'; ?>

@@ -17,8 +17,6 @@ footer section {
     ul {
         position: relative;
         z-index: 2;
-        padding-left: 0;
-        list-style: none;
         display: flex;
         justify-content: space-between;
         width: 50%;

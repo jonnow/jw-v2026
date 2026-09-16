@@ -23,4 +23,5 @@
     background: var(--palette-white);
     font-size: .8rem;
     text-decoration: none;
+    text-wrap: nowrap;
 }
