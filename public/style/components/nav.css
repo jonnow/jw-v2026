@@ -36,8 +36,8 @@ body > header {
     nav[popover] {
         transform: translate3d(100%, 0, 0);
         transition: transform 300ms ease-in-out,
-        display 300ms allow-discrete,
-        overlay 300ms allow-discrete;
+                    display 300ms allow-discrete,
+                    overlay 300ms allow-discrete;
         box-sizing: border-box;
         position: fixed;
         top: 0;
@@ -115,7 +115,7 @@ body > header {
 
 
 /* Desktop styles - not scoped within a media query as displaying in regular way, no need to unset the above. */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
     body > header {
         position: static;
         height: auto;
@@ -176,6 +176,9 @@ body > header {
 
 /* In-page contents nav */
 article nav {
+    background-color: ivory;
+    border-radius: 15px;
+    padding: 1rem;
     @media screen and (max-width: 600px) {
         box-sizing: border-box;
         display: block;
@@ -198,6 +201,14 @@ article nav {
         line-height: 125%;
         margin-bottom: .25rem;
         font-size: 1rem;
+    }
+
+    ol {
+        list-style: decimal;
+        padding-left: 1rem;
+        li {
+            padding-left: .25rem;
+        }
     }
 
     &.active {
