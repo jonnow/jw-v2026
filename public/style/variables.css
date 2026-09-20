@@ -1,4 +1,5 @@
 * {
+    /* Colours */
     --palette-green: darkslategrey;
     --palette-orange: orange;
     --palette-grey: slategrey;
@@ -7,9 +8,19 @@
     --palette-beige: beige;
     --palette-black: #222222;
 
+    /* Layout */
     --container-width: 80%;
 
     --section-child-spacing: 2rem;
 
     --spacing-std-gap: 3.125rem;
+
+    --font-heading: serif;
+    --font-body: sans-serif;
+
+    --font-size-h1: 1.5rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1.5rem;
+    --font-size-h5: 1.5rem;
 }

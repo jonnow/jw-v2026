@@ -1,11 +1,22 @@
 .thanks {
     display: flex;
-    justify-content: center;
-    img {
-        width: clamp(100px, 15%, 245px);
-    }
+    flex-direction: column-reverse;
+    align-items: center;
     p {
-        margin-left: 4rem;
-        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (min-width: 900px) {
+    .thanks {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img {
+            width: clamp(100px, 15%, 245px);
+        }
+        p {
+            margin-left: 4rem;
+            font-size: 1.75rem;
+        }
     }
 }

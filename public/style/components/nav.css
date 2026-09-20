@@ -28,9 +28,10 @@
 
 /* Site nav */
 body > header {
-    position: absolute;
-    overflow: visible;
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
 
     nav[popover] {
         transform: translate3d(100%, 0, 0);
@@ -119,11 +120,8 @@ body > header {
         position: static;
         height: auto;
         background-color: #272b66;
-
-            display: flex;
-        .menu-inner {
-        }
-
+        padding: 0 0 0 1rem;
+        margin-bottom: 2rem;
 
         .menu-control-open, .menu-control-close {
             display: none;
@@ -136,6 +134,7 @@ body > header {
             display: block;
             height: auto;
             transform: none;
+            padding: 0;
 
             div.menu-inner {
                 display: flex;
@@ -144,6 +143,8 @@ body > header {
             ul {
                 display: flex;
                 justify-content: end;
+                font-size: 1rem;
+
                 /* Make sure everything is pushed to the right edge */
                 margin-left: auto;
                 a {
@@ -154,6 +155,7 @@ body > header {
         }
 
         .nav-meta {
+            display: none;
             position: absolute;
             box-sizing: border-box;
             left: 0;
@@ -174,20 +176,52 @@ body > header {
 
 /* In-page contents nav */
 article nav {
-    position: sticky;
-    top: 10rem;
-    left: 0;
-    width: 200px;
-    margin-top: -18rem;
-    margin-bottom: 20rem;
+    @media screen and (max-width: 600px) {
+        box-sizing: border-box;
+        display: block;
+        padding: 1rem;
+        line-height: 1.5rem;
+
+        /*
+        Include this for pinned support
+        &.contents:not(.is-pinned) {
+            height: 3rem;
+
+            h3 {
+                margin-bottom:1rem;
+            }
+        }
+        */
+    }
+
     h3, ol li {
         line-height: 125%;
-        margin-bottom: .55rem;
+        margin-bottom: .25rem;
         font-size: 1rem;
     }
+
     &.active {
         a {
             font-weight: bold;
         }
+    }
+
+    @media screen and (min-width: 780px) {
+        position: sticky;
+        top: 8rem;
+        width: 200px;
+        margin-top: -20.9rem;
+        margin-bottom: 17rem;
+        h3, ol li {
+            margin-bottom: .55rem;
+        }
+    }
+
+    @media screen and (min-width: 968px) {
+        position: sticky;
+        top: 12.7rem;
+        width: 200px;
+        margin-top: -22.5rem;
+        margin-bottom: 17rem;
     }
 }

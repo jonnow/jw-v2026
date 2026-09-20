@@ -1,5 +1,9 @@
-.layout--grid {
-    display: grid;
-    grid-template-columns: repeat(8, 130px);
-    gap: 0 50px;
+@media screen and (min-width: 780px) {
+    .layout--grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        max-width: 1080px;
+        margin: 0 auto;
+        gap: 0 .4rem;
+    }
 }

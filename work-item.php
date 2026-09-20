@@ -62,16 +62,16 @@
                     </div>
                 </section>
             </div>
-            <aside class="project-wrap layout--grid">
-                <h2>Behind the scenes, beyond the project</h2>
+            <aside class="project-wrap">
+                <h4>Behind the scenes, beyond the project</h4>
                 <div class="row">
                     <a href="#">
-                        <h3>How it's built</h3>
+                        <h5>How it's built</h5>
                         <p>Interested in how I built this website?
                             Check out the repo on Github or read more on the blog.</p>
                     </a>
                     <a href="#">
-                        <h3>From the blog</h3>
+                        <h5>From the blog</h5>
                         <p>Read from my musings, ramblings, and witterings.</p>
                     </a>
                 </div>
@@ -80,3 +80,15 @@
     </article>
 </main>
 <?php include './includes/footer.php'; ?>
+<!--
+Include this for pinned support
+<script>
+    const el = document.querySelector(".contents")
+    const observer = new IntersectionObserver(
+        ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+        { threshold: [1] }
+    );
+
+    observer.observe(el);
+</script>
+-->
