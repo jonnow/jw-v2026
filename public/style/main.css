@@ -12,6 +12,7 @@
 @import url('./components/theShelf.css') layer(components);
 @import url('./components/thanks.css') layer(components);
 @import url('./pages/work-item.css') layer(components);
+@import url('./components/polaroids.css') layer(components);
 
 body {
     background-color: var(--palette-white);

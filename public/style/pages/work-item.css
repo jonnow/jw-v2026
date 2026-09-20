@@ -49,8 +49,7 @@
                 margin-bottom: .5rem;
             }
 
-            .image-container,
-            .polaroids {
+            .image-container {
                 display: flex;
             }
 

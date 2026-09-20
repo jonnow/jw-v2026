@@ -41,11 +41,12 @@
                         <img alt="alt tag for this image" src=""/>
                     </div>
                     <div class="polaroids">
-                        <img alt="alt tag for this image" src=""/>
-                        <img alt="alt tag for this image" src=""/>
-                        <img alt="alt tag for this image" src=""/>
-                        <img alt="alt tag for this image" src=""/>
-                        <img alt="alt tag for this image" src=""/>
+                        <img alt="alt tag for this image" src="./public/images/sample.png"/>
+                        <img alt="alt tag for this image" src="./public/images/sample.png"/>
+                        <img alt="alt tag for this image" src="./public/images/sample.png"/>
+                        <img alt="alt tag for this image" src="./public/images/sample.png"/>
+                        <img alt="alt tag for this image" src="./public/images/sample.png"/>
+
                     </div>
                 </section>
                 <section id="impact" class="layout--grid">
