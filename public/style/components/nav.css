@@ -155,15 +155,18 @@ body > header {
         }
 
         .nav-meta {
-            display: none;
             position: absolute;
-            box-sizing: border-box;
             left: 0;
             bottom: 2rem;
             display: flex;
+            justify-content: space-between;
             width: 100%;
             padding: 0 1rem;
-            justify-content: space-between;
+            color: var(--palette-white);
+            box-sizing: border-box;
+            span {
+                font-size: .8rem;
+            }
             span:first-child {
                 left: 2rem;
             }

@@ -1,5 +1,6 @@
 footer section {
-    background-color: blue;
+    background-color: var(--palette-black);
+    color: var(--palette-green);
     position: relative;
     padding-top: 2rem;
     overflow: hidden;
