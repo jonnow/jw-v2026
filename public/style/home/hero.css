@@ -10,6 +10,7 @@ main section.hero {
     }
     p {
         margin: 0 auto 1.75rem;
+        max-width: 1000px;
     }
     img {
         display: block;
