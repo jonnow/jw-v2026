@@ -6,8 +6,8 @@
     header {
         h1 {
             font-size: 2.25rem;
-            line-height: 120%;
             font-style: normal;
+            line-height: 120%;
             letter-spacing: -.01px;
         }
 
@@ -60,11 +60,11 @@
             }
 
             ul {
-                padding-left: .5rem;
-            }
-
-            li {
-                list-style-type: georgian;
+                padding-left: 1rem;
+                li {
+                    margin-left: .5rem;
+                    list-style-type: georgian;
+                }
             }
 
             .call-out-box {
@@ -144,10 +144,6 @@
 
 
     @media screen and (min-width: 780px) {
-        header, section {
-            /*grid-template-rows: subgrid;*/
-        }
-
         header {
             h1, .subheading {
                 grid-column: 1 / -2;
@@ -169,81 +165,44 @@
 
             ul.tags {
                 grid-column: 4 / -1;
-                margin-top: 1rem;
-                display: flex;
-
-            }
-
-            img {
-                grid-column: 3 / -2;
-                margin-top: 2rem;
-                margin-bottom: 2rem;
             }
         }
 
-        .post-body {
-            section {
-                background-color: white;
-                margin-bottom: 4rem;
+        .post-body section {
+            h2 {
+                grid-column: 1 / -1;
+                margin-bottom: 1.8rem;
+            }
 
-                h2 {
-                    grid-column: 1 / -1;
-                    font-size: 2rem;
-                    margin-bottom: 1.8rem;
-                }
+            h3 {
+                grid-column: 2 / -1;
+                margin-bottom: 1rem;
+            }
 
-                h3 {
-                    grid-column: 2 / -1;
-                    margin-left: 4rem;
-                    font-size: 1.75rem;
-                    margin-bottom: 1rem;
-                }
+            .image-container,
+            .polaroids {
+                grid-column-start: 2;
+                grid-column: 2 / -1;
+            }
 
-                .image-container,
-                .polaroids {
-                    grid-column-start: 2;
-                    grid-column: 2 / -1;
-                    display: flex;
-                }
+            p, ul {
+                grid-column: 3 / -2;
+            }
 
-                p, ul {
-                    grid-column: 3 / -2;
-                    font-size: 1rem;
-                    margin-bottom: 2rem;
-                }
+            ul {
+                padding-left: .5rem;
+            }
 
-                ul {
-                    padding-left: .5rem;
-                }
-
-                li {
-                    list-style-type: georgian;
-                }
-
-                .call-out-box {
-                    grid-column: 3 / -2;
-
-                    p {
-                        font-size: 0.95rem;
-                        margin-bottom: 0;
-                    }
-                }
+            .call-out-box {
+                grid-column: 3 / -2;
+                justify-self: center;
+                max-width: 780px;
             }
         }
 
         aside {
-            display: flex;
-            flex-direction: column;
             width: 100%;
-            margin: 0 auto 6rem;
-            padding-top: 3rem;
-            border-top: 1px solid lightgray;
 
-            h4 {
-                font-size: 1.25rem;
-                text-align: center;
-                margin-bottom: 1.5rem;
-            }
 
             .row {
                 display: grid;
@@ -264,7 +223,7 @@
                 font-size: 3.5rem;
             }
             p:not(.subheading) {
-                grid-column: 3 / -2;
+                grid-column: 4 / -2;
             }
             ul.tags {
                 grid-column: 4 / -1;
@@ -273,22 +232,18 @@
                 grid-column: 3 / -2;
             }
         }
-        h2 {
-            grid-column: 1 / -1;
-        }
-        h3 {
-            grid-column: 2 / -1;
-        }
-        .image-container,
-        .polaroids {
-            grid-column-start: 2;
-            grid-column: 2 / -1;
-        }
-        p, ul {
-            grid-column: 3 / -2;
-        }
-        .call-out-box {
-            grid-column: 3 / -2;
+        .post-body section {
+            h3 {
+                grid-column: 3 / -1;
+            }
+
+            p, ul {
+                margin-left: 2rem;
+            }
+
+            .call-out-box {
+                grid-column: 2 / -2;
+            }
         }
         aside {
             width: 60%;
