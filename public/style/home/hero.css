@@ -2,7 +2,6 @@ main section.hero {
     width: 95%;
     max-width: 1440px;
     margin: 2rem auto;
-    background-color: white;
     h1 {
         text-align: center;
         font-size: clamp(2rem, 4vw, 5rem);

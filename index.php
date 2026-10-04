@@ -10,25 +10,27 @@
             <h2>Hot off the press!</h2>
             <div class="the-loop">
                 <article data-type="photo">
-                    <label class="type">Photo</label>
-                    <img alt="alt tag for the image" />
+                    <a href="#" class="type">Photos</a>
+                    <label class="type">Fujifilm XT-30ii</label>
+                    <img alt="alt tag for the image" src="./public/images/sample.png" />
                 </article>
                 <article data-type="work">
-                    <label class="type">Work</label>
-                    <h1>Project title</h1>
-                    <img alt="alt tag for the image" />
+                    <a href="#" class="type">Work</a>
+                    <h1>Foods Standards Agency</h1>
+                    <img alt="alt tag for the image" src="./public/images/sample.png" />
                 </article>
                 <article data-type="photo">
-                    <label class="type">Photo</label>
-                    <img alt="alt tag for the image" />
+                    <a href="#" class="type">Photos</a>
+                    <label class="type">Fujifilm XT-30ii</label>
+                    <img alt="alt tag for the image" src="./public/images/sample.png" />
                 </article>
                 <article data-type="work">
-                    <label class="type">Work</label>
+                    <a href="#" class="type">Work</a>
                     <h1>Project title</h1>
-                    <img alt="alt tag for the image" />
+                    <img alt="alt tag for the image" src="./public/images/sample.png" />
                 </article>
                 <article data-type="post">
-                    <label class="type">Notes</label>
+                    <a href="#" class="type">Notes</a>
                     <h1>Blog post title</h1>
                     <time datetime="2026-08-21">21 August 2026</time>
                     <p class="excerpt">The introductory paragraph, a.k.a “snippet” to an interesting blog post. Long enough to garner interest, short enough to fit in here.</p>
@@ -39,8 +41,9 @@
                     </ul>
                 </article>
                 <article data-type="photo">
-                    <label class="type">Photo</label>
-                    <img alt="alt tag for the image" />
+                    <a href="#" class="type">Photos</a>
+                    <label class="type">Fujifilm X-T30ii</label>
+                    <img alt="alt tag for the image" src="./public/images/sample.png" />
                 </article>
             </div>
             <a class="btn btn-primary" href="blog">Visit the feed</a>

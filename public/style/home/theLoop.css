@@ -8,27 +8,39 @@ section.feed {
     .the-loop {
         display: grid;
         grid-auto-flow: row dense;
-        grid-template-columns: repeat(4, clamp(200px, 18vw, 400px));
-        grid-template-rows: repeat(2, 19rem);
         gap: 1rem;
+        justify-content: center;
         width: var(--container-width);
         margin: var(--section-child-spacing) auto;
+        @media screen and (min-width: 750px) {
+            grid-template-columns: repeat(4, clamp(200px, 18vw, 400px));
+            grid-template-rows: repeat(2, 19rem);
+            article {
+                aspect-ratio: 1 / 1;
+            }
+        }
         article {
             grid-column: span 1;
-            aspect-ratio: 1 / 1;
-            height: 100%;
-            width: 100%;
             display: flex;
             flex-direction: column;
             box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            border-radius: 1rem;
             background-color: white;
+            overflow: hidden;
             &[data-type="work"] {
                 grid-column: span 2;
                 aspect-ratio: 2 / 1;
+                img {
+                    width: 80%;
+                }
             }
+
             h1 {
-                font-size: 2rem;
+                font-size: 1.35rem;
                 letter-spacing: -0.5px;
+                margin-bottom: 1rem;
             }
             &[data-type="work"] h1 {
                 text-align: center;
@@ -37,28 +49,47 @@ section.feed {
                 font-size: 1rem;
                 font-weight: 200;
             }
-            label {
-                text-align: right;
-                margin-right: 1rem;
+
+            > a {
+                color: black;
+                text-decoration: none;
+                align-self: start;
+                margin-bottom: .5rem;
+                display: inline-block;
+            }
+            &:not([data-type="post"]) a {
                 margin-top: 1rem;
+                margin-left: 1rem;
+            }
+            a, label, time {
+                font-size: 0.8rem;
             }
             p {
-                font-size: 1rem;
+                font-size: .8rem;
+                color: var(--font-main-color);
+                margin-bottom: .75rem;
+                @media screen and (min-width: 750px) {
+                    font-size: .9rem;
+                    margin-bottom: 1rem;
+                }
             }
             ul.tag-selection {
                 display: flex;
-                margin-top: 1rem;
+                justify-self: end;
+                margin-top: auto;
                 font-size: 0.8rem;
                 li {
                     margin-right: 0.8rem;
+
                     &:last-child {
                         margin-right: 0;
                     }
                 }
             }
             time {
-                margin-top: .5rem;
-                margin-bottom: .5rem;
+                color: var(--font-main-color);
+                margin-top: -.85rem;
+                margin-bottom: .8rem;
             }
 
             img {
@@ -70,6 +101,44 @@ section.feed {
                 padding: 1rem;
                 label {
                     margin: 0;
+                }
+            }
+            &[data-type="photo"] {
+                display: grid;
+                grid-template-rows: 100%;
+                grid-template-columns: 100%;
+
+                a, label, img {
+                    grid-column: 1;
+                    grid-row: 1;
+                }
+
+                label {
+                    z-index: 1;
+                    background-color: rgba(0,0,0,0);
+                    justify-self: end;
+                    align-self: self-end;
+                    padding: .2rem .65rem;
+                    margin: 0 .5rem .5rem 0;
+                    border-radius: 7px;
+                    transition: background-color 0.1s;
+                }
+
+                img {
+                    min-height: 100%;
+                    min-width: 100%;
+                    object-fit: cover;
+                    transition: margin .2s ease-in-out;
+                    border-radius: 15px;
+                }
+
+                &:hover {
+                    img {
+                        margin-top: 3rem;
+                    }
+                    label {
+                        background-color: rgba(0, 0, 0, .6);
+                    }
                 }
             }
         }
